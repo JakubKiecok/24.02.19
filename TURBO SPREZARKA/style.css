@@ -1,0 +1,47 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.flex{
+    display: flex;
+}
+.gora{
+    height: calc(10vh - 35px);
+    width: 100vw;
+    padding-top: 35px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border-bottom: 2px red solid;
+    background-color: gray;
+}
+.gora input{
+    height: 15px;
+}
+.gora button{
+    height: 20px;
+}
+.lewo{
+    height: calc(90vh - 2px);
+    width: 10%;
+    border-right: 2px red solid;
+    background-color: gray;
+}
+#srodek{
+    height: calc(90vh - 2px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    display: flex;
+    overflow-y: scroll;
+    max-width: 80vw;
+}
+.prawo{
+    width: 10%;
+    height: calc(90vh - 2px);
+    border-left: 2px red solid;
+    background-color: gray;
+}

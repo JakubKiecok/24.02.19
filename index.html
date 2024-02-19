@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="blehh">
+        <input type="number" id="liczeb" name="liczeb" placeholder="Podaj ilosc liczb">
+        <input type="number" id="poteg" name="poteg" placeholder="Podaj jaka liczbe chcesz potegowac">
+        <button onclick="wynik()">Blehh</button>
+    </div>
+    <div class="miejsce">
+        <div id="wynik"></div>
+    </div>
+</body>
+<script>
+    function wynik(){
+        var liczba = document.getElementById("liczeb").value;
+        var potega = document.getElementById("poteg").value;
+        let tablica = new Array(potega)
+        for (let i = 0; i < potega; i++) {
+            tablica[i] = Math.pow(liczba,i)
+        }
+        console.log(tablica)
+        document.getElementById("wynik").textContent = tablica;
+    }
+</script>
+</html>
