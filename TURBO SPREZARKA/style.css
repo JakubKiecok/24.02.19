@@ -23,7 +23,7 @@ body, html{
 .gora button{
     height: 20px;
 }
-.lewo{
+#lewo{
     height: calc(90vh - 2px);
     width: 10%;
     border-right: 2px red solid;
