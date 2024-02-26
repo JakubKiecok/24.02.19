@@ -29,11 +29,26 @@
     <div class="flex">
         <div id="lewo"></div>
         <div id="srodek"></div>
-        <div class="prawo"></div>
+        <div class="prawo">
+            <label for="szyfr">Szyfr = </label>
+            <input type="text" id="szyfr" name="szyfr">
+            <button onclick="szyfr()">Szyfroj</button>
+        </div>
     </div>
 </body>
 <script>
     
+    function szyfr(){
+        var szyfr = document.getElementById("szyfr").value;
+        let charCodeArr = [szyfr];
+    
+        for(let i = 0; i < szyfr.length; i++){
+            let code = charCodeArr.charCodeAt(i);
+            charCodeArr.push(code);
+        }
+    
+        return charCodeArr;
+    }
 
     function wyswietl() {
         var ilosc = document.getElementById("ilosc").value;
@@ -70,10 +85,10 @@
             if (i%2 == 0) {
                 if (i%7 != 0){
                     trojkot.style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)" 
-                    trojkot.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-                    trojkot.style.borderColor = 'black';
-                    trojkot.style.borderStyle = 'solid';
-                    trojkot.style.borderWidth = 2 + 'px';
+                    trojkot.style.width = 50 + '%';
+                    trojkot.style.height = 50 + '%';
+                    trojkot.style.backgroundColor = 'black';
+                    trojkot.style.margin = "auto"
                     kwadrat.appendChild(trojkot); 
                 }
             }
